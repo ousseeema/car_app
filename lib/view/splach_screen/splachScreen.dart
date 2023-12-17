@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job_app/utils/colors.dart';
 import 'package:job_app/utils/demonstion.dart';
-import 'package:job_app/view/home/homepage.dart';
+import 'package:job_app/view/mainscreen/mainscreen.dart';
 
 class splachscreen extends StatefulWidget {
   const splachscreen({super.key});
@@ -27,12 +27,12 @@ class _splachscreenState extends State<splachscreen>
     // TODO: implement initState
     loadresources();
     controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 4))
-            .forward() as AnimationController;
-    animation = CurvedAnimation(parent: controller, curve: Curves.elasticIn);
-    Timer(const Duration(seconds: 5), () {
+        AnimationController(vsync: this, duration: const Duration(seconds: 7))
+            ..forward();
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeOutQuart);
+    Timer(const Duration(seconds: 12), () {
       // Get.toNamed to home screen
-      Get.to(()=>const HomePage());
+      Get.to(()=>const mainscreen());
     });
 
     super.initState();
@@ -41,17 +41,17 @@ class _splachscreenState extends State<splachscreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.mainColor,
+      backgroundColor:colors.spalshbackgroundcolor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+          children: [
           ScaleTransition(
             scale: animation,
-            child: Center(
+            child: const Center(
               child: Image(
-                image: const AssetImage("images/splachscreen.png"),
-                width: dimensions.splachwidth,
-                height: dimensions.splachheight,
+                image:  AssetImage("images/splashscreen.png"),
+                //width: dimensions.splachwidth,
+               // height: dimensions.splachheight,
               ),
             ),
           )

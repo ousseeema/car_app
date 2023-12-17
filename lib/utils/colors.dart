@@ -10,5 +10,6 @@ class colors{
   static Color? maintextcolor  = Colors.white54;
   static Color? buttontextcolor = Colors.white;
   static Color? bigtextcolor = Colors.black;
+  static Color? spalshbackgroundcolor = Colors.white;
 
 }
