@@ -21,8 +21,8 @@ class _costumcontainerState extends State<costumcontainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: dimensions.height10*20,
-      width:  dimensions.width10*20,
+      height: dimensions.height10*10,
+      width:  dimensions.width10*10,
       decoration: BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.circular(dimensions.radius20)
@@ -30,7 +30,7 @@ class _costumcontainerState extends State<costumcontainer> {
         ),
 
         child: Stack(
-            children: [
+            /*children: [
               Positioned(
                 //! the image of the rent company car or the logo
                 child: Container(
@@ -82,7 +82,7 @@ class _costumcontainerState extends State<costumcontainer> {
 
 
 
-            ],
+            ],*/
         ),
 
         
