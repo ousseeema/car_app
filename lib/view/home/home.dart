@@ -67,31 +67,27 @@ class _homePageState extends State<homePage> {
               SizedBox(
                 height: dimensions.height20,
               ),
-              Container(
-                height: 400,
-                width: Get.context!.width,
+              SizedBox(
+             
+                height: dimensions.height10*36,
                 child: ListView.builder(
                     padding: EdgeInsets.only(
                         left: dimensions.LRpadmarg20,
                         right: dimensions.LRpadmarg20,
                         top: dimensions.TBpadmarg20,
                         bottom: dimensions.TBpadmarg20),
-                             
-                    //scrollDirection: Axis.horizontal,
+                       shrinkWrap: true,      
+                    scrollDirection: Axis.horizontal,
                     itemCount: listagc.length,
                     itemBuilder: (_, index) {
-                      return Container(
-                        height: 300,
-                        width: 200,
-                        color: Colors.red,
-                      );
-                      /* costumcontainer(
+                      return costumcontainer(
                           name: listagc[index]["name"],
                           rating: listagc[index]["rating"],
                           location: listagc[index]["location"],
                           imageUrl: listagc[index]["imageUrl"],
                           tags: listagc[index]["tags"],
-                          rank: listagc[index]["rank"]);*/
+                          rank: listagc[index]["rank"]);
+                       
                     }),
               )
             ],
