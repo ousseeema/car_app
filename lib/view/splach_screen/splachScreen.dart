@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:job_app/utils/colors.dart';
 import 'package:job_app/utils/demonstion.dart';
 import 'package:job_app/view/mainscreen/mainscreen.dart';
+import 'package:job_app/view/splach_screen/affichedeAGENCE.dart';
 
 class splachscreen extends StatefulWidget {
   const splachscreen({super.key});
@@ -32,7 +33,7 @@ class _splachscreenState extends State<splachscreen>
     animation = CurvedAnimation(parent: controller, curve: Curves.easeOutQuart);
     Timer(const Duration(seconds: 12), () {
       // Get.toNamed to home screen
-      Get.to(()=>const mainscreen());
+      Get.off(()=>const affiche());
     });
 
     super.initState();

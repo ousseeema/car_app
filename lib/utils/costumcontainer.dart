@@ -8,21 +8,15 @@ import 'package:job_app/utils/demonstion.dart';
 
 class costumcontainer extends StatefulWidget {
   String name;
-  String rating;
-  String rank;
-  String location;
   String imageUrl;
-  String tags;
   int index ;
   costumcontainer(
       {super.key,
       required this.index,
       required this.name,
-      required this.rating,
-      required this.location,
+    
       required this.imageUrl,
-      required this.tags,
-      required this.rank});
+ });
 
   @override
   State<costumcontainer> createState() => _costumcontainerState();

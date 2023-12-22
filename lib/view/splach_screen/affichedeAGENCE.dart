@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:get/get.dart';
 import 'package:job_app/utils/costumcontainer.dart';
 import 'package:job_app/utils/demonstion.dart';
+import 'package:job_app/view/mainscreen/mainscreen.dart';
 
 class affiche extends StatefulWidget {
   const affiche({super.key});
@@ -255,24 +257,46 @@ class _afficheState extends State<affiche> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  SizedBox(
-             
-                height: dimensions.height-200,
-                child: MasonryGridView.builder(
-                  itemCount:listagc.length ,
-                  gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2 ,),
-                   itemBuilder: (_, index){
-                    return costumcontainer(
-                           index : index,
-                          name: listagc[index]["name"],
-                          rating: listagc[index]["rating"],
-                          location: listagc[index]["location"],
-                          imageUrl: listagc[index]["imageUrl"],
-                          tags: listagc[index]["tags"],
-                          rank: listagc[index]["rank"]);
-
-                   }),
+      body:  SafeArea(
+        child: Column(
+          children: [
+            SizedBox(height: dimensions.height10,),
+           const  Center(
+              child: Text("ALL OF YOUR AGENCE IN ONE PLACE ",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
+              ),
+            ),
+            SizedBox(
+              height: dimensions.height20,
+            ),
+        
+            SizedBox(
+                   
+                      height: dimensions.height-100,
+                      child: MasonryGridView.builder(
+                        itemCount:listagc.length ,
+                        gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2 ,),
+                         itemBuilder: (_, index){
+                          return GestureDetector(
+                            onTap: () {
+
+                              Get.to(()=>const mainscreen());
+                            },
+                            child: costumcontainer(
+                                   index : index,
+                                  name: listagc[index]["name"],
+                                  imageUrl: listagc[index]["imageUrl"],
+                                 ),
+                          );
+            
+                         }),
+                    ),
+          ],
+        ),
+      ),
     );
   }
 }
