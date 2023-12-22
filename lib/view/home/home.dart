@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:job_app/utils/colors.dart';
 import 'package:job_app/utils/constante.dart';
@@ -13,32 +14,7 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-  List<Map> listagc = [
-    {
-      "name": "midoun agence",
-      "rating": "4.5",
-      "rank": "1",
-      "location": "midoun",
-      "imageUrl": "noimage.png",
-      "tags": " hello there"
-    },
-    {
-      "name": "midoun agence",
-      "rating": "4.5",
-      "rank": "1",
-      "location": "midoun",
-      "imageUrl": "noimage.png",
-      "tags": " hello there"
-    },
-    {
-      "name": "midoun agence",
-      "rating": "4.5",
-      "rank": "1",
-      "location": "midoun",
-      "imageUrl": "noimage.png",
-      "tags": " hello there"
-    }
-  ];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,29 +43,7 @@ class _homePageState extends State<homePage> {
               SizedBox(
                 height: dimensions.height20,
               ),
-              SizedBox(
              
-                height: dimensions.height10*36,
-                child: ListView.builder(
-                    padding: EdgeInsets.only(
-                        left: dimensions.LRpadmarg20,
-                        right: dimensions.LRpadmarg20,
-                        top: dimensions.TBpadmarg20,
-                        bottom: dimensions.TBpadmarg20),
-                       shrinkWrap: true,      
-                    scrollDirection: Axis.horizontal,
-                    itemCount: listagc.length,
-                    itemBuilder: (_, index) {
-                      return costumcontainer(
-                          name: listagc[index]["name"],
-                          rating: listagc[index]["rating"],
-                          location: listagc[index]["location"],
-                          imageUrl: listagc[index]["imageUrl"],
-                          tags: listagc[index]["tags"],
-                          rank: listagc[index]["rank"]);
-                       
-                    }),
-              )
             ],
           ),
         ),

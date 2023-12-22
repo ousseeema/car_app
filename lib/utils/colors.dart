@@ -13,3 +13,11 @@ class colors{
   static Color? spalshbackgroundcolor = Colors.white;
 
 }
+ 
+
+
+
+
+
+
+                 
