@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:job_app/depandency/depandency.dart';
 import 'package:job_app/view/splach_screen/splachScreen.dart';
 
 void main() {
+  dep.init();
   runApp(const MyApp());
 }
 

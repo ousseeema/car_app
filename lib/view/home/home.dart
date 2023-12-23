@@ -43,6 +43,28 @@ class _homePageState extends State<homePage> {
               SizedBox(
                 height: dimensions.height20,
               ),
+
+              ListView.builder(
+                itemCount: 4,
+                itemBuilder: (_,index){
+                  return Container(
+                    height: dimensions.height20*10,
+                    width: dimensions.width-60,
+                    decoration: BoxDecoration(
+                      color: colors.backgroundColor,
+                      borderRadius: BorderRadius.circular(dimensions.radius20)
+                    ),
+                    child: const Center(
+                      child: Text("hello there"),
+                    ),
+
+                  );
+              })
+
+
+
+
+
              
             ],
           ),
