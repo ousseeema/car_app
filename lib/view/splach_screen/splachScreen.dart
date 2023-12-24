@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:job_app/controller/afficheController.dart';
 import 'package:job_app/utils/colors.dart';
 import 'package:job_app/utils/demonstion.dart';
 import 'package:job_app/view/mainscreen/mainscreen.dart';
@@ -19,8 +20,9 @@ class _splachscreenState extends State<splachscreen>
   late AnimationController controller;
   late Animation<double> animation;
   Future<void> loadresources() async {
-    // loading ressources that we need in ower application
-    // loading list of cars and list off available cars
+    // loading list of car  agence
+     //Get.find<afficheController>().loadingagence_data();
+
   }
 
   @override

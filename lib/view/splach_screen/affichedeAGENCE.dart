@@ -38,6 +38,7 @@ class _afficheState extends State<affiche> {
             SizedBox(
                    
                       height: dimensions.height-100,
+                      width: dimensions.width,
                       child: MasonryGridView.builder(
                         itemCount:listagc.length ,
                         gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2 ,),
