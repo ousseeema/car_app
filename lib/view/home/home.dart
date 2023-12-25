@@ -17,8 +17,7 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-   
-
+  final TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,96 +25,155 @@ class _homePageState extends State<homePage> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(dimensions.LRpadmarg20),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  const Expanded(flex: 4, child: Text("Hi there ")),
-                  Expanded(
-                    flex: 1,
-                    //!
-                    //! besh tji fiha el taswira mtaa user mtaana
-                    child: Container(
-                      width: 50,
-
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.menu_open),
+                    Spacer(),
+                    Container(
+                      width: dimensions.width20 * 2.5,
                       height: dimensions.height20 * 2.5,
                       decoration: BoxDecoration(
                           color: colors.buttontextcolor,
                           borderRadius:
                               BorderRadius.circular(dimensions.radius20)),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: dimensions.height20,
-              ),
-
-              SizedBox(
-                height: 200,
-                width: dimensions.width,
-                child: GetBuilder<homeController>(
-                  builder: (controller){
-                    return  PageView.builder(
-                    onPageChanged: (value){
-                      controller.changeindex(value);
-                    },
-                      dragStartBehavior: DragStartBehavior.down,
-                   
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 4,
-                    itemBuilder: (_,index){
-                      return Container(
-                        margin: EdgeInsets.only(right:10),
-                        height: dimensions.height20*10,
-                        width: dimensions.width-60,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(dimensions.radius20)
-                        ),
-                        child: const Center(
-                          child: Text("hello there"),
-                        ),
-                  
-                      );
-                  });
-              
-                  },
-              
-                  
+                    )
+                  ],
                 ),
-                
-              ),
-
-              SizedBox( height: dimensions.height10,),
-
-              GetBuilder<homeController>(
-                builder: (controller1){
-                  return DotsIndicator(
-                    decorator: DotsDecorator(
-                      color: Colors.grey,
-                      activeColor: Colors.black,
-                      size: const Size.square(9.0),
-                      activeSize: const Size(18.0, 9.0),
-                      activeShape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0)
-                      )
+                SizedBox(
+                  height: dimensions.height10,
+                ),
+                Text(
+                  "Find the best car",
+                  style: TextStyle(
+                    fontSize: dimensions.font20 + dimensions.font10,
+                    color: Colors.black,
+                    wordSpacing: 1.5,
+                  ),
+                ),
+                Text(
+                  "Smartly",
+                  style: TextStyle(
+                      fontSize: dimensions.font20 + dimensions.font10,
+                      color: Colors.blue[700],
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: dimensions.height10,
+                ),
+                Center(
+                  child: Container(
+                    height: dimensions.height10 * 5,
+                    width: dimensions.width30 * 12,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(dimensions.radius40),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey[350]!,
+                            offset: const Offset(1, 1),
+                            spreadRadius: 5,
+                            blurRadius: 8,
+                          )
+                        ]),
+                    child: Row(
+                      children: [
+                        TextField(
+                          controller: searchController,
+                          decoration: InputDecoration(
+                            hintText: "Search brands, price and more",
+                            hintStyle: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: dimensions.font10,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        Container(
+                          height: dimensions.height10 * 5,
+                          width: dimensions.width10 * 2,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(dimensions.radius40)),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.blue[700],
+                            size: dimensions.icon16,
+                          ),
+                        )
+                      ],
                     ),
+                  ),
+                ),
 
-                 dotsCount: 4,
-                 position: controller1.PageViewSelectedIndex ,
+                SizedBox(
+                  height: dimensions.height10,
+                ),
+                Text("Hot Deals", style: TextStyle(
+                  fontSize: dimensions.font20 + dimensions.font10/2,
+                  color: Colors.black,
+                  wordSpacing: 1.5,
+                ),),
                 
-                );
-                },
-                
-              )
+                SizedBox(
+                  height: dimensions.height10,
+                ),
+                SizedBox(
+                  height: dimensions.height20 * 10,
+                  width: dimensions.width,
+                  child: GetBuilder<homeController>(
+                    builder: (controller) {
+                      return PageView.builder(
+                         
+                          scrollDirection: Axis.horizontal,
+                          itemCount: controller.Listagencedetails.length,
+                          itemBuilder: (_, index) {
+                            return Container(
+                              margin: EdgeInsets.only(
+                                  right: dimensions.LRpadmarg10),
+                              height: dimensions.height20 * 10,
+                              width: dimensions.width30*4,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(
+                                      dimensions.radius20),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey[350]!,
+                                          offset: const Offset(1, 1),
+                                          spreadRadius: 3,
+                                          blurRadius: 7,
+                                        )
+                                      ]
+                                      
+                                      
+                                      ),
+                              child:  Center(
+                                child: Column(
+                                  children: [
+                                    Image.network(''),
 
+                                    Text(''),
+                                    Text('\$ 120'),
+                                    Container(
+                                      height: 20,
+                                      width: 60,
 
-
-
-
-             
-            ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          });
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
