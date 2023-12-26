@@ -247,18 +247,18 @@ class afficheController extends GetxController {
 
   List<Map> selectedagence = [];
 
-  void loadingagence_data() async {
+  /*void loadingagence_data() async {
     Response response = await Get.find<afficheRepo>().getallagence();
-    //! handling the response from the serveur 
-    //* if the response is 200 then we add the data to the listagc
+    ! handling the response from the serveur 
+     if the response is 200 then we add the data to the listagc
     if (response.statusText == 200) {
       response.body.forEach((agence) => listagc.add(agence));
     } 
-    //* else we add an empty list to the listagc for the test in the ui
+    * else we add an empty list to the listagc for the test in the ui
     else {
       listagc = [];
     }
-  }
+  }*/
 
   void addselectedagence(index) {
     selectedagence = [];

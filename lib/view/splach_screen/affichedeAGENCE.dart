@@ -45,9 +45,8 @@ class _afficheState extends State<affiche> {
                          itemBuilder: (_, index){
                           return GestureDetector(
                             onTap: () {
-
+                             Get.find<afficheController>().addselectedagence(index); 
                               Get.to(()=>const mainscreen());
-                              Get.find<afficheController>().addselectedagence(index);
                             },
                             child: costumcontainer(
                                    index : index,
