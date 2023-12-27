@@ -23,8 +23,8 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:colors.backgroundColor!,
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(18),
             child: Column(
@@ -241,8 +241,8 @@ class _homePageState extends State<homePage> {
                     fontWeight: FontWeight.bold,
                     wordSpacing: 1.5,
                 ),),
-
-
+          
+          
                 SizedBox(
                   height: dimensions.height20 * 10,
                   width: dimensions.width,
@@ -267,21 +267,100 @@ class _homePageState extends State<homePage> {
                               child: Row(
                                 children: [
                                   Container(
-                                    height:100 ,
-                                    width:  80,
+                                    height:dimensions.height10*15 ,
+                                    width:  100,
                                     decoration: BoxDecoration( 
+                                                  borderRadius: BorderRadius.circular(dimensions.radius20),
+                                                  image: DecorationImage(
+                                                  image:AssetImage("images/${controller.listagc[index]["imageUrl"]}")  )
+                                    ), 
+
+
+
+                                  ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [ 
+                                             SizedBox(height: 10,),
+                                      Text("Honda City Hatchback"),
+                                      SizedBox(height: 10,),
+
+                                      Row(
+                                        children: [
+                                          Text("1500 CC"),
+                                          SizedBox(width: 10),
+                                          Text("5 setorange"),
+                                         SizedBox(width: 10,),
+                                          Text("gazoline"),
+                                          
+
+
+
+                                        ],
+                                      ), 
+                                             SizedBox(height: 10,),
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [ 
+                                        
+                                          Container(
+                                                height: 40,
+                                                width: 120,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white, 
+                                                  borderRadius: BorderRadius.circular(40),
+                                                  border: Border.all(
+                                                    color: Colors.blue,
+                                                    width: 2
+                                                  )
+                            
+                            
+                                                ),
+                                                child :const  Center(child: 
+                                                Text("Book A Test Drive ", 
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold)
+                                                ),) 
+                                               ),
+                                               SizedBox(width: 10,) ,
+
+
+
+                                               Container(
+                                                height:40,
+                                                width:80,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.blue, 
+                                                  borderRadius: BorderRadius.circular(40),
+                                                  
+                            
+                            
+                                                ),
+                                                child :const  Center(child: 
+                                                Text("Buy Now", 
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold)
+                                                ),) 
+                                               ),
+
+
+                                        ],
+                                      )
 
                                       
-
-                                    ),
+                                    ],
                                   )
                                 ],
                               ),
-
-
-
-
-
+          
+          
+          
+          
+          
                                                 
                                                 
                             ),
