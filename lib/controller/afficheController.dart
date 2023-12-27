@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:job_app/repo/afficheRepo.dart';
 
 class afficheController extends GetxController {
   List<Map> listagc = [
@@ -8,7 +7,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "1.jpeg",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -16,7 +15,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -24,7 +23,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "3.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -32,7 +31,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "4.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
     },
     {
@@ -40,7 +39,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "5.jpeg",
+      "imageUrl": "car5.png",
       "tags": " hello there"
     },
     {
@@ -48,7 +47,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "1.jpeg",
+      "imageUrl": "car6.png",
       "tags": " hello there"
     },
     {
@@ -56,7 +55,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -64,7 +63,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "3.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -72,7 +71,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "4.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -80,7 +79,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "5.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
     },
     {
@@ -88,7 +87,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "1.jpeg",
+      "imageUrl": "car5.png",
       "tags": " hello there"
     },
     {
@@ -96,7 +95,14 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -104,7 +110,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "3.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -112,7 +118,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "4.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -120,7 +126,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "5.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
     },
     {
@@ -128,7 +134,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "1.jpeg",
+      "imageUrl": "car5.png",
       "tags": " hello there"
     },
     {
@@ -136,7 +142,14 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -144,7 +157,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "6.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -152,7 +165,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "4.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -160,7 +173,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "5.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
     },
     {
@@ -168,7 +181,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "6.jpeg",
+      "imageUrl": "car5.png",
       "tags": " hello there"
     },
     {
@@ -176,7 +189,14 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -184,7 +204,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "3.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -192,7 +212,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "4.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -200,7 +220,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "7.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
     },
     {
@@ -208,7 +228,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "1.jpeg",
+      "imageUrl": "car5.png",
       "tags": " hello there"
     },
     {
@@ -216,7 +236,14 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "2.jpeg",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
       "tags": " hello there"
     },
     {
@@ -224,7 +251,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "3.jpeg",
+      "imageUrl": "car2.png",
       "tags": " hello there"
     },
     {
@@ -232,7 +259,7 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "6.jpeg",
+      "imageUrl": "car3.png",
       "tags": " hello there"
     },
     {
@@ -240,9 +267,119 @@ class afficheController extends GetxController {
       "rating": "4.5",
       "rank": "1",
       "location": "midoun",
-      "imageUrl": "7.jpeg",
+      "imageUrl": "car4.png",
       "tags": " hello there"
-    }
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car5.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car2.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car3.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car4.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car5.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },{
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car1.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car2.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car3.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car4.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car5.png",
+      "tags": " hello there"
+    },
+    {
+      "name": "midoun agence",
+      "rating": "4.5",
+      "rank": "1",
+      "location": "midoun",
+      "imageUrl": "car6.png",
+      "tags": " hello there"
+    },
   ];
 
   List<Map> selectedagence = [];
@@ -262,6 +399,12 @@ class afficheController extends GetxController {
 
   void addselectedagence(index) {
     selectedagence = [];
-    selectedagence.add(listagc[index]);
-  }
+    selectedagence.add(listagc[index]); 
+     }          
+
+
+
+
+
 }
+
