@@ -1,13 +1,9 @@
-import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:job_app/controller/afficheController.dart';
-import 'package:job_app/controller/homeController.dart';
 import 'package:job_app/utils/colors.dart';
-import 'package:job_app/utils/constante.dart';
-import 'package:job_app/utils/costumcontainer.dart';
 import 'package:job_app/utils/demonstion.dart';
 
 class homePage extends StatefulWidget {
@@ -26,7 +22,7 @@ class _homePageState extends State<homePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(8),
             child: Column(
               
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,15 +30,22 @@ class _homePageState extends State<homePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Icon(Icons.menu_open),
+                     Icon(Icons.menu_sharp, size: dimensions.icon16+10,),
                     const Spacer(),
                     Container(
                       width: dimensions.width20 * 2.5,
                       height: dimensions.height20 * 2.5,
                       decoration: BoxDecoration(
-                          color: Colors.black,
+                      //    in the future we should change this to the photo that the user uploads 
+                            //? image: DecorationImage(image: asset),
+                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(dimensions.radius20)),
-                    )
+                     child: const  Center(
+                      child: Icon(CupertinoIcons.person, color: Colors.white,),
+                     ),
+                   
+                    ),
+
                   ],
                 ),
                 SizedBox(
