@@ -1,10 +1,7 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_emoji/flutter_emoji.dart';
-import 'package:job_app/utils/colors.dart';
-import 'package:job_app/utils/constante.dart';
-import 'package:job_app/utils/demonstion.dart';
+
 
 class costumcontainer extends StatefulWidget {
   String name;
