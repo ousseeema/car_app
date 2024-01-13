@@ -4,6 +4,7 @@ import 'package:job_app/depandency/depandency.dart';
 import 'package:job_app/view/splach_screen/splachScreen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   dep.init();
   runApp(const MyApp());
 }
