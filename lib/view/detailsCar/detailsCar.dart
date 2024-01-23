@@ -50,7 +50,7 @@ class _CarDetailsState extends State<CarDetails> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [ 
                                          SizedBox(height: dimensions.height10,),
-                                      Text(, 
+                                      Text(controller.car!["name"], 
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold, 
                                         fontSize: dimensions.font20
