@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job_app/depandency/depandency.dart';
-import 'package:job_app/view/detailsCar/detailsCar.dart';
 import 'package:job_app/view/splach_screen/splachScreen.dart';
 
 void main() {
+    dep.init();
   WidgetsFlutterBinding.ensureInitialized();
-  dep.init();
+
   runApp(const MyApp());
 }
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CarDetails() 
+      home: const splachscreen()  
     );
   }
 }

@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job_app/controller/afficheController.dart';
+import 'package:job_app/controller/detailsCarController.dart';
 import 'package:job_app/controller/searchController.dart';
 import 'package:job_app/utils/colors.dart';
 import 'package:job_app/utils/demonstion.dart';
+import 'package:job_app/view/detailsCar/detailsCar.dart';
 
 class searchPage extends StatefulWidget {
   const searchPage({super.key});
@@ -195,15 +197,28 @@ class _searchPageState extends State<searchPage> {
                                     ],
                                    ),
                                   const Spacer(),
-                                  Container(
-                                    height: dimensions.height20*2.3,
-                                    width: dimensions.width20*2.3,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(dimensions.radius10),
-                                      color: Colors.blueAccent[700]
+                                 GetBuilder<CarDetailsController>(
+                                  
+                                  builder: (detailscontroller){
+
+                                    return  GestureDetector(
+                                    onTap: () {
+                                      
+                                      detailscontroller.addCar(controller.listagc[index]);
+                                       Get.to(()=>const CarDetails());
+                                      
+                                    },
+                                    child: Container(
+                                      height: dimensions.height20*2.3,
+                                      width: dimensions.width20*2.3,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(dimensions.radius10),
+                                        color: Colors.blueAccent[700]
+                                      ),
+                                      child:const  Icon(Icons.arrow_forward, color: Colors.white,),
                                     ),
-                                    child:const  Icon(Icons.arrow_forward, color: Colors.white,),
-                                  ), 
+                                  );
+                                  }) ,
                                   SizedBox(width: dimensions.width10,),
 
                                   ],
