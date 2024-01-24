@@ -37,6 +37,10 @@ class _CarDetailsState extends State<CarDetails> {
               ),
               
               )),
+              Positioned(
+                top: 180,
+                
+                child: Image(image: AssetImage("images/${controller.car!["imageUrl"]}"))),
             Positioned(
               top: 160,
               child: Container(
@@ -58,6 +62,7 @@ class _CarDetailsState extends State<CarDetails> {
                                         SizedBox(height: dimensions.height10,),
                                       const Text('\$100', 
                                       style: TextStyle(
+                                         
                                         fontWeight: FontWeight.bold, 
                                         fontSize: 16
                                       ),),
@@ -74,6 +79,35 @@ class _CarDetailsState extends State<CarDetails> {
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(dimensions.radius10), topRight: Radius.circular(dimensions.radius10))
               ),
+                 
+                 child: Column(
+                  children: [ 
+                    Text("Costumize", style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: dimensions.font20,
+
+                    ),),
+
+
+                    GridView.custom(
+                      gridDelegate: const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 21),
+                       childrenDelegate: SliverChildBuilderDelegate(
+                         (BuildContext context, int index){
+                           return Container(
+                             height: 50,
+                             width: 80,
+                             decoration: BoxDecoration(
+                               color: Colors.blue,
+                               borderRadius: BorderRadius.circular(dimensions.radius10)
+                             ),
+                             child: Center(child: Text("${controller.detailsList[index]}")),
+                           );
+                         },
+                         childCount: 6
+                       )
+                       )
+                  ],
+                 ),
                 
               ))
           ],

@@ -197,15 +197,11 @@ class _searchPageState extends State<searchPage> {
                                     ],
                                    ),
                                   const Spacer(),
-                                 GetBuilder<CarDetailsController>(
-                                  
-                                  builder: (detailscontroller){
-
-                                    return  GestureDetector(
+                                
+                                   GestureDetector(
                                     onTap: () {
-                                      
-                                      detailscontroller.addCar(controller.listagc[index]);
-                                       Get.to(()=>const CarDetails());
+                                      Get.find<CarDetailsController>().addCar(controller.listagc[index]);
+                                       Get.to(const CarDetails());
                                       
                                     },
                                     child: Container(
@@ -217,8 +213,8 @@ class _searchPageState extends State<searchPage> {
                                       ),
                                       child:const  Icon(Icons.arrow_forward, color: Colors.white,),
                                     ),
-                                  );
-                                  }) ,
+                                  ),
+                                  
                                   SizedBox(width: dimensions.width10,),
 
                                   ],
