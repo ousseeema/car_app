@@ -112,21 +112,35 @@ class _CarDetailsState extends State<CarDetails> {
                               crossAxisCount: 2,
                             ),
                             itemBuilder: (_, index) {
-                              return GestureDetector(
-                                  onTap: () {},
-                                  child: Container(
+                              return Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                  color: Colors.black,
+                                  width: 2,
+                                ), 
+                                boxShadow:   [
+                                  BoxShadow(
+                                  offset: Offset(0,-3 ), 
+                                  color: Colors.grey,
+                                  
 
-                                    height: 50,
-                                    width: 50,
-                                    decoration:  BoxDecoration(
-                                      border: Border.all(
-                                        color: Colors.black,
-                                        width: 2,
-                                        
-                                      )
-                                    ),
-                                    child: Center(child: Text(Costumize[index])),
-                                  ));
+                                  )
+
+
+                                ]
+                                ),
+                                child:
+                                    Center(child: Text(
+                                        Costumize[index],
+                                        style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: dimensions.font20,                                      
+                                      ),
+                                      
+                                      )),
+                              );
                             }),
                       ),
                     ],
