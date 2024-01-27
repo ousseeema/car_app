@@ -82,7 +82,7 @@ class _searchPageState extends State<searchPage> {
               Padding(
                 padding: EdgeInsets.only(left: dimensions.LRpadmarg10),
                 child: SizedBox(
-                    height: 100,
+                    height: 120,
                     width: dimensions.width,
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -101,7 +101,7 @@ class _searchPageState extends State<searchPage> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: dimensions.height10 * 9,
+                                  height: dimensions.height10 * 8.5,
                                   width: dimensions.width30 * 3,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
